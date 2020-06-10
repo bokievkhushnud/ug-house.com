@@ -487,4 +487,7 @@ li:hover a{
 .right-arrow:hover{
     border-color: transparent  transparent transparent rgb(179, 169, 169);
 }
+.body{
+    overflow-x:hidden;
+}
 
