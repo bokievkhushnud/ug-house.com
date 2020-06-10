@@ -275,21 +275,19 @@ div>p{
 }
 /* Contact Us */
 .main-contact{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding-bottom: 10px;
     margin-bottom: 30px;
+    padding-left: 20px;
 }
 .phone{
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: auto auto;
-    widows: 100%;
-    margin-left: 10px;
-    justify-content: start;
+    grid-template-columns: max-content 50px;
     margin-top: 0;  
+    width: 90%;
 }
 span>span{
     margin-left: 5px;
@@ -321,7 +319,8 @@ footer{
     display: grid;
     grid-gap: 0px;
     grid-template-rows: auto auto;
-    width: inherit;
+    padding-left: 90px;
+    padding-right: 90px;
 }
 .footer{
     background-color: #4a4646;
@@ -379,6 +378,7 @@ footer{
 }
 .smedia-info{
     display: flex;
+    flex-wrap: wrap;
 }
 .push-l{
     margin-left: auto;
@@ -400,8 +400,8 @@ footer{
 .lang-info{
     display: grid;
     grid-gap: 0px;
-    grid-template-columns: repeat(auto-fill,minmax(340px,1fr));
-    
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    border-top: 2px solid black;
 }
 .all-right{
     margin-left: 10px;
@@ -429,10 +429,13 @@ li:hover a{
         margin-right: 10px;
         margin-left: 10px;
     }
+    footer{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .social-media{
         margin-right: auto;
         margin-left: 20px;
-        
     }
     .smedia-info{
         padding: 0;
@@ -453,9 +456,11 @@ li:hover a{
     .author{
         margin-left: 20px;
     }
-    /* .text-part{
-        margin: 0;
-    } */
+    .main-contact{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .arrow{
@@ -487,7 +492,15 @@ li:hover a{
 .right-arrow:hover{
     border-color: transparent  transparent transparent rgb(179, 169, 169);
 }
-.body{
-    overflow-x:hidden;
+@media only screen and (max-width: 350px){
+    .text-part{
+        padding-top: 10px;
+        background-color: #f7f5f5;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
+    .read-more>.read-more{
+        margin-right:10px;
+    }
 }
-
