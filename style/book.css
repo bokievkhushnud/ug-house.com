@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.f-wrapper{
+    display: flex;
+    padding-top:10px ;
+    background: url(../photos/eighth.jpg) no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+.book-now-r{
+    background-color: rgba(56, 46, 46, 0.7);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 60%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    border-radius: 20px;
+}
+nav{
+    position: relative;
+}
+
+.full-name,.phone-numbers,.gender,.other-info,.date{
+    margin: 20px;
+}
+label{
+    width: 100%;
+    color: snow;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 10px;
+    margin-left:0;
+}
+.full-name{
+    display: grid;
+    grid-template-areas:
+    "fn fn"
+    "fname lname";
+}
+
+.fn{
+    grid-area: fn;
+}
+.fname{
+    grid-area: fname;
+}
+.lname{
+    grid-area: lname;
+}
+.other-info{
+    display: flex;
+    flex-direction: column;
+}
+.pre{
+    color: rgb(223, 220, 215);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin:0px 5px;
+}
+.gender{
+    display: grid;
+    grid-template-areas: 
+    "gen gen gen gen gen gen"
+    "p1 m p2 f p3 o";
+    justify-content: start;
+    align-items: center;
+}
+.gen{
+    grid-area: gen;
+}
+.o{
+    grid-area: o;
+}
+.m{
+    grid-area: m;
+}
+.f{
+    grid-area: f;
+}
+.p1{
+    grid-area:p1;
+}
+.p2{
+    grid-area:p2;
+}
+.p3{
+    grid-area:p3;
+}
+input{
+    height: 2.2rem;
+    border: 1px yellowgreen solid;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    background: none;
+    color: white;
+    
+}
+::placeholder{
+    color: white;
+}
+
+.btn-s{
+    background-color: yellowgreen;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 20px;
+    height: 3rem;
+    transition: 0.4s ease;
+}
+.btn-s:hover{
+    background-color: rgba(8, 4, 4, 0.5);
+    color: yellowgreen;
+}
+.b-title{
+    justify-self: center;
+    align-self: center;
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media only screen and (max-width: 860px){
+    .book-now-r{
+        width: 70%;
+    }
+    .full-name{
+        display: grid;
+        grid-template-areas:
+        "fn"
+        "fname"
+        "lname";
+    }
+    .gender{
+        display: grid;
+        grid-template-areas: 
+        "gen gen"
+        "p1 m"
+        "p2 f"
+        "p3 o";
+        justify-content: start;
+        align-items: center;
+    }
+    .fname,.lname,.f,.m{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    
+}
+@media only screen and (max-width: 500px){
+    .book-now-r{
+        width: 80%;
+    }
+}

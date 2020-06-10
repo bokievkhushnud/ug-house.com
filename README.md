@@ -1,2 +1,2 @@
-# ug-house
-Guest House Project
+# ug-house.com
+ Guest house project

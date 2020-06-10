@@ -1,0 +1,121 @@
+
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    overflow: visible;
+}
+.gallery{
+    margin: 65px 110px;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    margin-top:30px ;
+}
+footer{
+    bottom: 0;
+    width: 100%;
+}
+.top-box{
+    width: 100%;
+    margin: 10px 0px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns:repeat(4,1fr) ;
+    grid-template-areas:
+    "showcase showcase showcase top-box-a" 
+    "showcase showcase showcase top-box-b";
+}
+.showcase{
+    grid-area: showcase;
+    height: 100%;
+    width: 100%;
+}
+.top-box-a{
+    grid-area: top-box-a;
+   
+}
+.top-box-a{
+    grid-area: top-box-b;
+
+}
+.image-g{
+    size: cover;
+}
+.bottom-box{
+    width: 100%;
+    margin: 10px 0px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    justify-content: space-between;
+}
+
+.bottom-b-box{
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+    "bot-b bot-b bot-a" ;
+}
+.bot-a{
+    grid-area: bot-a;
+}
+.bot-b{
+    grid-area: bot-b;
+}
+.svs{
+    margin-right: auto;
+}
+.svs>h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    color: lightslategray;
+    font-size: 2em;
+    display: flex;
+    /* text-align: center; */
+}
+.shadow{
+    box-shadow: #918c8c 2px 2px;
+    border: 1px solid #918c8c;
+}
+
+
+@media only screen and (max-width: 900px){
+    .top-box{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas:
+        "showcase showcase" 
+        "showcase showcase" 
+        "top-box-b top-box-a";
+    }
+    .bottom-b-box{
+        grid-template-areas:
+        "bot-b bot-b"
+        "bot-a bot-a" ;
+    }
+}
+@media only screen and (max-width: 600px){
+    .top-box{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas:
+        "showcase " 
+        "top-box-b"
+        "top-box-a";
+    }
+    .bottom-b-box{
+        grid-template-areas:
+        "bot-b bot-b"
+        "bot-a bot-a" ;
+    }
+}
+div img:hover{
+    cursor: pointer;
+    border: 3px solid rgb(175, 170, 170);
+}
