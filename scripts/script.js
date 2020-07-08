@@ -1,8 +1,10 @@
 const hamburger =document.querySelector(".hamburger");
 const nav = document.getElementById("nav-m");
-
+const body= document.querySelector("body");
 hamburger.addEventListener("click", ()=>{
     nav.classList.toggle("nav-mobi-t")
+    body.classList.toggle("mobi-scroll-x")
+
 })
 
 // Image Slider
